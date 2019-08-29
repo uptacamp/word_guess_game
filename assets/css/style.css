@@ -1,0 +1,121 @@
+body {
+    
+    background-color: #ffffff;
+    border-color: #dddddd;
+    font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+ header {
+    background-image: none;
+    background-color: #ffffff;
+    border-color: #cccccc;
+    margin: auto;
+    overflow: auto;
+    clear: both;
+    width: 960px;
+    height: auto;
+       }
+
+  .header_nav {
+      float: right; 
+         
+  }
+
+footer {
+    
+    background-color: #4aaaa5;
+    text-align: center;
+    color: #FFF;
+    border-top: 5px solid #dddddd;
+   
+}
+
+h1 {
+    background-color: #4aaaa5;
+    color: white;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    float:center;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+    
+            
+}
+
+h2 {
+    color:#4aaaa5;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #dddddd;
+    text-align:center;
+}
+
+p {
+    color:#777777;
+}
+
+.header_links {
+    
+    display: inline-block;
+    padding: 20px 10px 5px 10px;
+    color:#777777;
+    text-decoration: none;
+    
+   
+}
+
+
+.content-background {
+    background-image: url("../images/background.png");
+    border-top: 2px solid #dddddd;
+    padding: 20px; 50px 50px 50px;
+         }
+
+.content {
+
+    background-color: #ffffff;
+    border: 1px solid #e9dbdb;
+    width: 960px;
+    padding: 15px;
+    margin: auto;
+    
+    
+}
+
+.first_pic {
+    float:left;
+    padding:    0px 20px 0px 20px;
+    }
+
+   
+ .portfolio_item {
+    background-image: url("../images/cats.jpg");
+    background-repeat: no-repeat;
+    margin: 15px;
+    height: 200px;
+    width: 250px;
+    border-width: 1px;
+    display: inline-block;
+    text-align: center;
+    }
+
+ .portfolio_item a {
+        background-color: #4aaaa5;
+        color: white;
+        font-family: 'Georgia', Times, Times New Roman, serif;
+        margin: 0px;
+        text-decoration: none;
+        display: inline-block;
+        height: 30px;
+        width: 250px;
+        margin-top: 140px;
+        padding-top: 2px;
+        
+            }
+    
+.submit {
+    background-color: #4aaaa5;
+    color: white;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    margin: 10px 0px; 10px 0px; 
+}
