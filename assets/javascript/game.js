@@ -1,6 +1,11 @@
 'use strict'
 
-let shows = {
+let wins = 0;
+let losses = 0;
+let guesses_left = 10;
+let input_character = "";
+
+let show_choices = {
     choices:[
         ['Game Of Thrones'],
         ['The Simpsons'],
@@ -16,52 +21,79 @@ let shows = {
     ]
 };
 
-
-let wins = 0;
-let losses = 0;
-let guessed = 0;
-let guesses_left = 10;
-let user_input = '';
-let game_continue = yes;
+let selected_show = "";
 
 
-//check for valid game status
-function ValidGameStatus() {
-  if(guesses_left === 0) {
-  console.log("Sorry game is over");
-  return
-  }
+new UserInput();
+
+//everything starts with user input.
+
+function UserInput (){
+  if (new IsValidInput(input_character)){
+       if(guesses_left === 0) {
+          console.log("sorry game is over");
+          return;
+        }
+      
+        else if (guesses_left == 10){
+          console.log("starting new game");
+          new BeginGame();
+        }
+      
+      
+      new IsMatchingInput();
+      //insert code to check if the puzzle is solved
+      guesses_left = guesses_left - 1; 
+  
+   }
+  
   else {
-    console.log("Adequate Guesses left");
-    return true
+    return;
   }
-} 
+}
+
+
+//new game orchestration
+function BeginGame (){
+
+}
+ 
+    
+  
 
 
 //check if entry was a valid guess (letter and not already guessed)
-function ValidInput() {};
+function IsValidInput() {
+  console.log("checking for alpha input");
+}
+
 
 //check if letter was a match or not
-function MatchingInput(){};
+function IsMatchingInput(){
+  console.log("checking for a match");
+}
 
 
 
-//lay out game orchestration
-function BeginGame (){
-  console.log("Begin Game")
- 
-  if (new ValidGameStatus()) {
-    console.log("proceed to next game step");
-    new ValidInput();
-    new MatchingInput();
-    
-    }
-  }
+//if game is over, clear out puzzle word
 
 
 
 
-// actually start game orchestration here
-new BeginGame();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
