@@ -52,12 +52,14 @@ h2 {
 
 .wordplay {
     text-transform: capitalize;
-    letter-spacing: 3px;
+    letter-spacing: 8px;
     font-family: "Lucida Console", Monaco, monospace;
     padding-top: 15px;
+    
 
 p {
     color:#777777;
+    letter-spacing: 3px;
 }
 
 .header_links {
