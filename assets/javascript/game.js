@@ -39,7 +39,7 @@ function UserInput (){
   puzzle.input_character = puzzle.input_character.toUpperCase();
   console.log(puzzle.input_character);
   
-  if (new IsValidInput(puzzle.input_character)){
+  if (IsValidInput(puzzle.input_character)){
       puzzle.letters_guessed = puzzle.input_character + ", " + puzzle.letters_guessed;
       document.getElementById("letters_guessed").innerHTML = puzzle.letters_guessed; 
       if (puzzle.first_guess_occurred == false){
@@ -88,7 +88,7 @@ function UserInput (){
 //check if entry was a letter
 function IsValidInput(input_character) {
   console.log("function: IsValidInput");
-   if(/^[a-zA-Z]/.test(input_character) & puzzle.input_character !== "")
+   if(/^[a-zA-Z]/.test(input_character) & puzzle.input_character !== "" & puzzle.input_character.length == 1)
      {
       return true;
      } 
