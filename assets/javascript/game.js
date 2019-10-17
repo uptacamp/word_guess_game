@@ -39,9 +39,13 @@ function UserInput (){
   puzzle.input_character = puzzle.input_character.toUpperCase();
   console.log(puzzle.input_character);
   
+  
   if (IsValidInput(puzzle.input_character)){
+      if (puzzle.letters_guessed.search(puzzle.input_character) !== -1) {
+       return;
+      }
       puzzle.letters_guessed = puzzle.input_character + ", " + puzzle.letters_guessed;
-      document.getElementById("letters_guessed").innerHTML = puzzle.letters_guessed; 
+        document.getElementById("letters_guessed").innerHTML = puzzle.letters_guessed; 
       if (puzzle.first_guess_occurred == false){
           new SetupGame();
           new IsMatchingInput();
