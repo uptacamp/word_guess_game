@@ -44,7 +44,12 @@ function UserInput (){
       if (puzzle.letters_guessed.search(puzzle.input_character) !== -1) {
        return;
       }
-      puzzle.letters_guessed = puzzle.input_character + ", " + puzzle.letters_guessed;
+      if (puzzle.letters_guessed.length == 0) {
+        puzzle.letters_guessed = puzzle.input_character;
+      }
+      else {
+        puzzle.letters_guessed = puzzle.input_character + ", " + puzzle.letters_guessed; 
+      }
         document.getElementById("letters_guessed").innerHTML = puzzle.letters_guessed; 
       if (puzzle.first_guess_occurred == false){
           new SetupGame();
@@ -71,7 +76,6 @@ function UserInput (){
       } 
 
       console.log("matching letters (this guess): " + puzzle.matching_letters);
-      
       
       if(puzzle.displayed_result == puzzle.selected_show){
         
